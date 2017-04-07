@@ -1,0 +1,844 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6FE3F339-9E7D-4AA6-BAD1-BA77486316F0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KDTHK_SYS_MAN_CONSOLE</RootNamespace>
+    <AssemblyName>KDTHK_SYS_MAN_CONSOLE</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>\\kdthk-dm1\project\IT System\System Management Console\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>System Management Console</ProductName>
+    <PublisherName>KDTHK</PublisherName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <TrustUrlParameters>true</TrustUrlParameters>
+    <ApplicationRevision>59</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>true</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>1453814604_agt_web.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>08122EE613AC346C621274B122FFF97EA7D5B1F1</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>KDTHK_SYS_MAN_CONSOLE_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AdvancedDataGridView">
+      <HintPath>..\..\IPO_Tool\IPO_Tool\lib\native\AdvancedDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="CustomUtil">
+      <HintPath>..\..\CustomUtil\CustomUtil\bin\Debug\CustomUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataService.cs" />
+    <Compile Include="DataServiceEdu.cs" />
+    <Compile Include="DataServiceM.cs" />
+    <Compile Include="DataUtil.cs" />
+    <Compile Include="flat-forms\application\ApplicationView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="flat-forms\application\ApplicationView.Designer.cs">
+      <DependentUpon>ApplicationView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\assets\AssetDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="flat-forms\assets\AssetDetail.Designer.cs">
+      <DependentUpon>AssetDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\assets\AssetView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="flat-forms\assets\AssetView.Designer.cs">
+      <DependentUpon>AssetView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\disc\DiscHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="flat-forms\disc\DiscHistory.Designer.cs">
+      <DependentUpon>DiscHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\disc\DiscIdle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="flat-forms\disc\DiscIdle.Designer.cs">
+      <DependentUpon>DiscIdle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\disc\DiscIdleList.cs" />
+    <Compile Include="flat-forms\disc\DiscLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="flat-forms\disc\DiscLoading.Designer.cs">
+      <DependentUpon>DiscLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\disc\DiscOverview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="flat-forms\disc\DiscOverview.Designer.cs">
+      <DependentUpon>DiscOverview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\disc\DiscProcessing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="flat-forms\disc\DiscProcessing.Designer.cs">
+      <DependentUpon>DiscProcessing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\disc\DiscSetup1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="flat-forms\disc\DiscSetup1.Designer.cs">
+      <DependentUpon>DiscSetup1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\disc\DiscSetupIdle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="flat-forms\disc\DiscSetupIdle.Designer.cs">
+      <DependentUpon>DiscSetupIdle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\disc\DiscUtil.cs" />
+    <Compile Include="flat-forms\disc\DiscView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="flat-forms\disc\DiscView.Designer.cs">
+      <DependentUpon>DiscView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\education\EducationReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="flat-forms\education\EducationReport.Designer.cs">
+      <DependentUpon>EducationReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\education\EducationResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="flat-forms\education\EducationResult.Designer.cs">
+      <DependentUpon>EducationResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\education\EducationScore.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="flat-forms\education\EducationScore.Designer.cs">
+      <DependentUpon>EducationScore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\education\EducationUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="flat-forms\education\EducationUser.Designer.cs">
+      <DependentUpon>EducationUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\education\EducationView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="flat-forms\education\EducationView.Designer.cs">
+      <DependentUpon>EducationView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\forms\data-form\DataFormAsset.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="flat-forms\forms\data-form\DataFormAsset.Designer.cs">
+      <DependentUpon>DataFormAsset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\forms\data-form\DataFormComment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="flat-forms\forms\data-form\DataFormComment.Designer.cs">
+      <DependentUpon>DataFormComment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\forms\data-form\DataFormDevelop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="flat-forms\forms\data-form\DataFormDevelop.Designer.cs">
+      <DependentUpon>DataFormDevelop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\forms\data-form\DataFormPermission.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="flat-forms\forms\data-form\DataFormPermission.Designer.cs">
+      <DependentUpon>DataFormPermission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\forms\data-form\DataFormR3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="flat-forms\forms\data-form\DataFormR3.Designer.cs">
+      <DependentUpon>DataFormR3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\forms\data-form\DataFormSupport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="flat-forms\forms\data-form\DataFormSupport.Designer.cs">
+      <DependentUpon>DataFormSupport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\forms\FormMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="flat-forms\forms\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\forms\FormOverview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="flat-forms\forms\FormOverview.Designer.cs">
+      <DependentUpon>FormOverview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\forms\FormSupport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="flat-forms\forms\FormSupport.Designer.cs">
+      <DependentUpon>FormSupport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\forms\FormView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="flat-forms\forms\FormView.Designer.cs">
+      <DependentUpon>FormView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\forms\FormView2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="flat-forms\forms\FormView2.Designer.cs">
+      <DependentUpon>FormView2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\forms\pop-form\PFormAsset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="flat-forms\forms\pop-form\PFormAsset.Designer.cs">
+      <DependentUpon>PFormAsset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\forms\pop-form\PFormComment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="flat-forms\forms\pop-form\PFormComment.Designer.cs">
+      <DependentUpon>PFormComment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\forms\pop-form\PFormDevelop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="flat-forms\forms\pop-form\PFormDevelop.Designer.cs">
+      <DependentUpon>PFormDevelop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\forms\pop-form\PFormPermission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="flat-forms\forms\pop-form\PFormPermission.Designer.cs">
+      <DependentUpon>PFormPermission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\forms\pop-form\PFormR3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="flat-forms\forms\pop-form\PFormR3.Designer.cs">
+      <DependentUpon>PFormR3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\forms\pop-form\PFormSupport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="flat-forms\forms\pop-form\PFormSupport.Designer.cs">
+      <DependentUpon>PFormSupport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\forms\sub-forms\FormApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="flat-forms\forms\sub-forms\FormApplication.Designer.cs">
+      <DependentUpon>FormApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\forms\sub-forms\FormITUsage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="flat-forms\forms\sub-forms\FormITUsage.Designer.cs">
+      <DependentUpon>FormITUsage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\forms\sub-forms\FormITUsage2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="flat-forms\forms\sub-forms\FormITUsage2.Designer.cs">
+      <DependentUpon>FormITUsage2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\forms\sub-forms\FormQa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="flat-forms\forms\sub-forms\FormQa.Designer.cs">
+      <DependentUpon>FormQa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\forms\sub-forms\FormQaSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="flat-forms\forms\sub-forms\FormQaSetup.Designer.cs">
+      <DependentUpon>FormQaSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\forms\sub-forms\FormR3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="flat-forms\forms\sub-forms\FormR3.Designer.cs">
+      <DependentUpon>FormR3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\forms\sub-forms\SFormAsset.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="flat-forms\forms\sub-forms\SFormAsset.Designer.cs">
+      <DependentUpon>SFormAsset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\forms\sub-forms\SFormComment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="flat-forms\forms\sub-forms\SFormComment.Designer.cs">
+      <DependentUpon>SFormComment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\forms\sub-forms\SFormDevelopment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="flat-forms\forms\sub-forms\SFormDevelopment.Designer.cs">
+      <DependentUpon>SFormDevelopment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\forms\sub-forms\SFormPermission.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="flat-forms\forms\sub-forms\SFormPermission.Designer.cs">
+      <DependentUpon>SFormPermission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\forms\sub-forms\SFormR3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="flat-forms\forms\sub-forms\SFormR3.Designer.cs">
+      <DependentUpon>SFormR3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\forms\sub-forms\SFormSupport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="flat-forms\forms\sub-forms\SFormSupport.Designer.cs">
+      <DependentUpon>SFormSupport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\general\UserSearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="flat-forms\general\UserSearchForm.Designer.cs">
+      <DependentUpon>UserSearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flat-forms\setup\SetupView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="flat-forms\setup\SetupView.Designer.cs">
+      <DependentUpon>SetupView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\assets\AssetOverview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\assets\AssetOverview.Designer.cs">
+      <DependentUpon>AssetOverview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\education\EducationAnswers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\education\EducationAnswers.Designer.cs">
+      <DependentUpon>EducationAnswers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\education\EducationAnswersInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\education\EducationAnswersInput.Designer.cs">
+      <DependentUpon>EducationAnswersInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\education\EducationList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\education\EducationList.Designer.cs">
+      <DependentUpon>EducationList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\education\EducationMail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\education\EducationMail.Designer.cs">
+      <DependentUpon>EducationMail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\education\EducationNew.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\education\EducationNew.Designer.cs">
+      <DependentUpon>EducationNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\education\EducationOverview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\education\EducationOverview.Designer.cs">
+      <DependentUpon>EducationOverview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\education\EducationReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\education\EducationReport.Designer.cs">
+      <DependentUpon>EducationReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\education\EducationStaff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\education\EducationStaff.Designer.cs">
+      <DependentUpon>EducationStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\education\EducationStaffNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\education\EducationStaffNew.Designer.cs">
+      <DependentUpon>EducationStaffNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\mycloud\MyCloudApplication.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\mycloud\MyCloudApplication.Designer.cs">
+      <DependentUpon>MyCloudApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\mycloud\MyCloudApplicationNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\mycloud\MyCloudApplicationNew.Designer.cs">
+      <DependentUpon>MyCloudApplicationNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\mycloud\MyCloudApplicationNew2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\mycloud\MyCloudApplicationNew2.Designer.cs">
+      <DependentUpon>MyCloudApplicationNew2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\mycloud\MyCloudOverview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\mycloud\MyCloudOverview.Designer.cs">
+      <DependentUpon>MyCloudOverview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\utils\Ad.cs" />
+    <Compile Include="forms\utils\EformUtil.cs" />
+    <Compile Include="forms\utils\ExtUtil.cs" />
+    <Compile Include="lists\FormList.cs" />
+    <Compile Include="lists\QaList.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main2.Designer.cs">
+      <DependentUpon>Main2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="services\DataServiceEducation.cs" />
+    <Compile Include="services\DataServiceIT.cs" />
+    <Compile Include="services\DataServiceMaster.cs" />
+    <Compile Include="services\DataServiceMyCloud.cs" />
+    <Compile Include="services\GlobalService.cs" />
+    <Compile Include="utils\DataUtil.cs" />
+    <Compile Include="utils\EducationUtil.cs" />
+    <Compile Include="utils\ImpersonatedUser.cs" />
+    <Compile Include="utils\MyCloudUtil.cs" />
+    <Compile Include="utils\RtfPrintUtil.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="utils\UserUtil.cs" />
+    <EmbeddedResource Include="flat-forms\application\ApplicationView.resx">
+      <DependentUpon>ApplicationView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\assets\AssetDetail.resx">
+      <DependentUpon>AssetDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\assets\AssetView.resx">
+      <DependentUpon>AssetView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\disc\DiscHistory.resx">
+      <DependentUpon>DiscHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\disc\DiscIdle.resx">
+      <DependentUpon>DiscIdle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\disc\DiscLoading.resx">
+      <DependentUpon>DiscLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\disc\DiscOverview.resx">
+      <DependentUpon>DiscOverview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\disc\DiscProcessing.resx">
+      <DependentUpon>DiscProcessing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\disc\DiscSetup1.resx">
+      <DependentUpon>DiscSetup1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\disc\DiscSetupIdle.resx">
+      <DependentUpon>DiscSetupIdle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\disc\DiscView.resx">
+      <DependentUpon>DiscView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\education\EducationReport.resx">
+      <DependentUpon>EducationReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\education\EducationResult.resx">
+      <DependentUpon>EducationResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\education\EducationScore.resx">
+      <DependentUpon>EducationScore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\education\EducationUser.resx">
+      <DependentUpon>EducationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\education\EducationView.resx">
+      <DependentUpon>EducationView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\forms\data-form\DataFormAsset.resx">
+      <DependentUpon>DataFormAsset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\forms\data-form\DataFormComment.resx">
+      <DependentUpon>DataFormComment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\forms\data-form\DataFormDevelop.resx">
+      <DependentUpon>DataFormDevelop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\forms\data-form\DataFormPermission.resx">
+      <DependentUpon>DataFormPermission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\forms\data-form\DataFormR3.resx">
+      <DependentUpon>DataFormR3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\forms\data-form\DataFormSupport.resx">
+      <DependentUpon>DataFormSupport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\forms\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\forms\FormOverview.resx">
+      <DependentUpon>FormOverview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\forms\FormSupport.resx">
+      <DependentUpon>FormSupport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\forms\FormView.resx">
+      <DependentUpon>FormView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\forms\FormView2.resx">
+      <DependentUpon>FormView2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\forms\pop-form\PFormAsset.resx">
+      <DependentUpon>PFormAsset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\forms\pop-form\PFormComment.resx">
+      <DependentUpon>PFormComment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\forms\pop-form\PFormDevelop.resx">
+      <DependentUpon>PFormDevelop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\forms\pop-form\PFormPermission.resx">
+      <DependentUpon>PFormPermission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\forms\pop-form\PFormR3.resx">
+      <DependentUpon>PFormR3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\forms\pop-form\PFormSupport.resx">
+      <DependentUpon>PFormSupport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\forms\sub-forms\FormApplication.resx">
+      <DependentUpon>FormApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\forms\sub-forms\FormITUsage.resx">
+      <DependentUpon>FormITUsage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\forms\sub-forms\FormITUsage2.resx">
+      <DependentUpon>FormITUsage2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\forms\sub-forms\FormQa.resx">
+      <DependentUpon>FormQa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\forms\sub-forms\FormQaSetup.resx">
+      <DependentUpon>FormQaSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\forms\sub-forms\FormR3.resx">
+      <DependentUpon>FormR3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\forms\sub-forms\SFormAsset.resx">
+      <DependentUpon>SFormAsset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\forms\sub-forms\SFormComment.resx">
+      <DependentUpon>SFormComment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\forms\sub-forms\SFormDevelopment.resx">
+      <DependentUpon>SFormDevelopment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\forms\sub-forms\SFormPermission.resx">
+      <DependentUpon>SFormPermission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\forms\sub-forms\SFormR3.resx">
+      <DependentUpon>SFormR3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\forms\sub-forms\SFormSupport.resx">
+      <DependentUpon>SFormSupport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\general\UserSearchForm.resx">
+      <DependentUpon>UserSearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flat-forms\setup\SetupView.resx">
+      <DependentUpon>SetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\assets\AssetOverview.resx">
+      <DependentUpon>AssetOverview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\education\EducationAnswers.resx">
+      <DependentUpon>EducationAnswers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\education\EducationAnswersInput.resx">
+      <DependentUpon>EducationAnswersInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\education\EducationList.resx">
+      <DependentUpon>EducationList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\education\EducationMail.resx">
+      <DependentUpon>EducationMail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\education\EducationNew.resx">
+      <DependentUpon>EducationNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\education\EducationOverview.resx">
+      <DependentUpon>EducationOverview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\education\EducationReport.resx">
+      <DependentUpon>EducationReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\education\EducationStaff.resx">
+      <DependentUpon>EducationStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\education\EducationStaffNew.resx">
+      <DependentUpon>EducationStaffNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\mycloud\MyCloudApplication.resx">
+      <DependentUpon>MyCloudApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\mycloud\MyCloudApplicationNew.resx">
+      <DependentUpon>MyCloudApplicationNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\mycloud\MyCloudApplicationNew2.resx">
+      <DependentUpon>MyCloudApplicationNew2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\mycloud\MyCloudOverview.resx">
+      <DependentUpon>MyCloudOverview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main2.resx">
+      <DependentUpon>Main2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="KDTHK_SYS_MAN_CONSOLE_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="1444042334_wrench.ico" />
+    <None Include="Resources\minus-gray.png" />
+    <None Include="Resources\1423646946_bullet-yellow24.png" />
+    <None Include="Resources\1425972057_bullet-blue24.png" />
+    <None Include="Resources\1423646761_bullet-red24.png" />
+    <None Include="Resources\1423646926_bullet-green24.png" />
+    <None Include="Resources\1425305349_bullet-grey24.png" />
+    <None Include="Resources\1423646926_bullet-green20.png" />
+    <None Include="Resources\1423646946_bullet-yellow20.png" />
+    <None Include="Resources\1425305349_bullet-grey20.png" />
+    <None Include="Resources\1425972057_bullet-blue20.png" />
+    <None Include="Resources\1423646761_bullet-red20.png" />
+    <None Include="Resources\1449146259_up.png" />
+    <None Include="Resources\1449146259_down.png" />
+    <None Include="Resources\search_16.png" />
+    <None Include="Resources\cloud24.png" />
+    <None Include="Resources\dvd24.png" />
+    <None Include="Resources\form24.png" />
+    <None Include="Resources\monitor24.png" />
+    <None Include="Resources\dots24.png" />
+    <None Include="Resources\mind24.png" />
+    <None Include="Resources\college24.png" />
+    <None Include="Resources\tick.png" />
+    <Content Include="1453814604_agt_web.ico" />
+    <Content Include="images\imgemail.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\folder-open.png" />
+    <None Include="Resources\setup_24.png" />
+    <None Include="Resources\dot_24.png" />
+    <Content Include="lib\native\CustomUtil.dll" />
+    <Content Include="text\redo.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\tick_icon.png" />
+    <None Include="Resources\cross_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="forms\eform\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>if exist "$(TargetPath).locked" del "$(TargetPath).locked" if exist "$(TargetPath)" if not exist "$(TargetPath).locked" move "$(TargetPath)" "$(TargetPath).locked"</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
