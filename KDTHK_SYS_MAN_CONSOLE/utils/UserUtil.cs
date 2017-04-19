@@ -23,6 +23,10 @@ namespace KDTHK_SYS_MAN_CONSOLE.utils
         {
             return "Nakata";
         }
+        public static string ItUserName5()
+        {
+            return "Cato Yeung Pui Kwan (楊沛昆)";
+        }
         public static string ItManagerName()
         {
             return "Donovan Chan Wing Shing (陳永成)";

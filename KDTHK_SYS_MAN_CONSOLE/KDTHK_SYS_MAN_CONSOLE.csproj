@@ -29,7 +29,7 @@
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
     <TrustUrlParameters>true</TrustUrlParameters>
-    <ApplicationRevision>59</ApplicationRevision>
+    <ApplicationRevision>66</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -118,6 +118,10 @@
     </Reference>
     <Reference Include="CustomUtil">
       <HintPath>..\..\CustomUtil\CustomUtil\bin\Debug\CustomUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="Net.SourceForge.Koogra, Version=3.1.5.0, Culture=neutral, PublicKeyToken=5acac79db1633ace, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\native\Net.SourceForge.Koogra.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -542,6 +546,7 @@
     <Compile Include="services\DataServiceMaster.cs" />
     <Compile Include="services\DataServiceMyCloud.cs" />
     <Compile Include="services\GlobalService.cs" />
+    <Compile Include="utils\CustomUtil.cs" />
     <Compile Include="utils\DataUtil.cs" />
     <Compile Include="utils\EducationUtil.cs" />
     <Compile Include="utils\ImpersonatedUser.cs" />
@@ -799,6 +804,7 @@
     <None Include="Resources\setup_24.png" />
     <None Include="Resources\dot_24.png" />
     <Content Include="lib\native\CustomUtil.dll" />
+    <Content Include="lib\native\Net.SourceForge.Koogra.dll" />
     <Content Include="text\redo.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -829,6 +835,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="forms\eform\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{9635C848-376F-4C6F-8A62-3D69973C9240}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

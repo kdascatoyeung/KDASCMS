@@ -38,6 +38,7 @@ namespace KDTHK_SYS_MAN_CONSOLE.flat_forms.forms
                 col.Items.Add(UserUtil.ItUserName1());
                 col.Items.Add(UserUtil.ItUserName2());
                 col.Items.Add(UserUtil.ItUserName3());
+                col.Items.Add(UserUtil.ItUserName5());
             } 
             
             LoadData("");

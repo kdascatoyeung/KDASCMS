@@ -250,8 +250,9 @@ namespace KDTHK_SYS_MAN_CONSOLE.flat_forms.forms.sub_forms
             this.chandleby.HeaderText = "HandleBy";
             this.chandleby.Items.AddRange(new object[] {
             UserUtil.ItUserName1(),
+            UserUtil.ItUserName2(),
             UserUtil.ItUserName3(),
-            UserUtil.ItUserName2()});
+            UserUtil.ItUserName5()});
             //"Yeung Wai, Gabriel (楊偉)",
             //"Lee Ming Fung(李銘峯)",
             //"Ho Kin Hang(何健恒,Ken)",

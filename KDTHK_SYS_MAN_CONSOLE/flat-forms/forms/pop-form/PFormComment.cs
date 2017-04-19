@@ -28,27 +28,30 @@ namespace KDTHK_SYS_MAN_CONSOLE.flat_forms.forms.pop_form
 
             LoadData(chaseno);
 
-            if (mode == "completed")
+            /*if (mode == "completed")
             {
                 btnSave.Enabled = false;
                 btnComplete.Enabled = false;
-            }
+            }*/
 
             _chaseno = chaseno;
 
-            cbAssign.Items.Add("---");
+            /*cbAssign.Items.Add("---");
 
             foreach (string item in GlobalService.ITList)
-                cbAssign.Items.Add(item.Trim());
+                cbAssign.Items.Add(item.Trim());*/
 
             //cbAssign.SelectedIndex = 0;
+            //btnSave.Click += new EventHandler(this.btnSave_Click);
+            //btnComplete.Click += new EventHandler(this.btnComplete_Click);
+            DialogResult = DialogResult.OK;
         }
 
         private void LoadApplicationData(string chaseno)
         {
             string refno = chaseno.StartsWith("IT-C") ? DataUtil.GetRefNo("comment", chaseno) : chaseno;
 
-            string query = string.Format("select f_applicant, c_question, f_start, f_end, f_title, c_answer from TB_FORM, TB_FORM_COMMENT where f_chaseno = c_refno and f_chaseno = '{0}'", refno);
+            string query = string.Format("select f_applicant, c_question, f_start, f_end, f_title, f_handleby, c_answer from TB_FORM, TB_FORM_COMMENT where f_chaseno = c_refno and f_chaseno = '{0}'", refno);
             //Debug.WriteLine("Query: " + query);
 
             using (IDataReader reader = DataService.GetInstance().ExecuteReader(query))
@@ -63,8 +66,10 @@ namespace KDTHK_SYS_MAN_CONSOLE.flat_forms.forms.pop_form
 
                     txtTitle.Text = reader.GetString(4);
 
-                    Byte[] content = new Byte[Convert.ToInt32((reader.GetBytes(5, 0, null, 0, Int32.MaxValue)))];
-                    long bytesReceived = reader.GetBytes(5, 0, content, 0, content.Length);
+                    txtAssignTo.Text = reader.GetString(5);
+
+                    Byte[] content = new Byte[Convert.ToInt32((reader.GetBytes(6, 0, null, 0, Int32.MaxValue)))];
+                    long bytesReceived = reader.GetBytes(6, 0, content, 0, content.Length);
                     ASCIIEncoding encoding = new ASCIIEncoding();
                     txtSolution.Rtf = encoding.GetString(content, 0, Convert.ToInt32(bytesReceived));
                 }
@@ -101,7 +106,7 @@ namespace KDTHK_SYS_MAN_CONSOLE.flat_forms.forms.pop_form
             {
                 while (reader.Read())
                 {
-                    cbAssign.Text = reader.GetString(0).Trim();
+                    txtAssignTo.Text = reader.GetString(0).Trim();
                     txtQuestion.Text = reader.GetString(1).Trim();
 
                     Byte[] content = new Byte[Convert.ToInt32((reader.GetBytes(2, 0, null, 0, Int32.MaxValue)))];
@@ -112,7 +117,7 @@ namespace KDTHK_SYS_MAN_CONSOLE.flat_forms.forms.pop_form
             }
         }
 
-        private void btnSave_MouseEnter(object sender, EventArgs e)
+        /*private void btnSave_MouseEnter(object sender, EventArgs e)
         {
             Button button = (Button)sender;
             button.ForeColor = Color.White;
@@ -122,7 +127,7 @@ namespace KDTHK_SYS_MAN_CONSOLE.flat_forms.forms.pop_form
         {
             Button button = (Button)sender;
             button.ForeColor = Color.FromArgb(58, 58, 58);
-        }
+        }*/
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -132,7 +137,7 @@ namespace KDTHK_SYS_MAN_CONSOLE.flat_forms.forms.pop_form
             Byte[] rtf = new Byte[size];
             stream.Read(rtf, 0, size);
 
-            string query = string.Format("update TB_FORM_COMMENT set c_handledby = N'{0}', c_question = N'{1}', c_answer = @Answer where c_chaseno = '{2}'", cbAssign.SelectedItem.ToString().Trim(), txtQuestion.Text, _chaseno);
+            string query = string.Format("update TB_FORM_COMMENT set c_question = N'{0}', c_answer = @Answer where c_chaseno = '{1}'", txtQuestion.Text, _chaseno);
             SqlCommand cmd = new SqlCommand(query, DataService.GetInstance().Connection);
 
             SqlParameter param = new SqlParameter("@Answer", SqlDbType.Image, rtf.Length, ParameterDirection.Input, false, 0, 0, null, DataRowVersion.Current, rtf);

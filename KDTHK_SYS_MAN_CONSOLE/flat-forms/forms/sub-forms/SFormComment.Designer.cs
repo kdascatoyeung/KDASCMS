@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.pnlForm = new CustomUtil.controls.panel.CustomPanel();
-            this.txtSolution = new System.Windows.Forms.RichTextBox();
             this.cbAssign = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
@@ -41,6 +40,7 @@
             this.cbItem = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.txtSolution = new System.Windows.Forms.RichTextBox();
             this.pnlForm.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,28 +74,20 @@
             this.pnlForm.Size = new System.Drawing.Size(642, 622);
             this.pnlForm.TabIndex = 137;
             // 
-            // txtSolution
-            // 
-            this.txtSolution.Location = new System.Drawing.Point(86, 124);
-            this.txtSolution.Name = "txtSolution";
-            this.txtSolution.Size = new System.Drawing.Size(540, 275);
-            this.txtSolution.TabIndex = 72;
-            this.txtSolution.Text = "";
-            // 
             // cbAssign
             // 
             this.cbAssign.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbAssign.FormattingEnabled = true;
-            this.cbAssign.Location = new System.Drawing.Point(86, 405);
+            this.cbAssign.Location = new System.Drawing.Point(86, 382);
             this.cbAssign.Name = "cbAssign";
             this.cbAssign.Size = new System.Drawing.Size(230, 27);
-            this.cbAssign.TabIndex = 71;
+            this.cbAssign.TabIndex = 80;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 409);
+            this.label1.Location = new System.Drawing.Point(16, 386);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 18);
             this.label1.TabIndex = 70;
@@ -113,7 +105,7 @@
             this.btnSave.Location = new System.Drawing.Point(518, 579);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(108, 30);
-            this.btnSave.TabIndex = 66;
+            this.btnSave.TabIndex = 100;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -205,6 +197,14 @@
             this.label6.Size = new System.Drawing.Size(153, 36);
             this.label6.TabIndex = 51;
             this.label6.Text = "COMMENT";
+            // 
+            // txtSolution
+            // 
+            this.txtSolution.Location = new System.Drawing.Point(86, 124);
+            this.txtSolution.Name = "txtSolution";
+            this.txtSolution.Size = new System.Drawing.Size(540, 252);
+            this.txtSolution.TabIndex = 72;
+            this.txtSolution.Text = "";
             // 
             // SFormComment
             // 

@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using KDTHK_SYS_MAN_CONSOLE.services;
 using KDTHK_SYS_MAN_CONSOLE.forms.utils;
-using CustomUtil.utils.authentication;
+using Common;
 using System.IO;
 using KDTHK_SYS_MAN_CONSOLE.flat_forms.general;
 using KDTHK_SYS_MAN_CONSOLE.utils;
@@ -79,9 +79,9 @@ namespace KDTHK_SYS_MAN_CONSOLE.flat_forms.forms.sub_forms
 
                 DataService.GetInstance().ExecuteNonQuery(query);
 
-                string from = AdUtil.GetEmailByUserId(AdUtil.GetUserIdByUsername(GlobalService.User, "kmhk.local"), "kmhk.local");
+                string from = AdUtil.GetEmailByUserId(AdUtil.GetUserIdByUsername(GlobalService.User));
 
-                string to = AdUtil.GetEmailByUserId(AdUtil.GetUserIdByUsername(cmApprover, "kmhk.local"), "kmhk.local");
+                string to = AdUtil.GetEmailByUserId(AdUtil.GetUserIdByUsername(cmApprover));
 
                 EformUtil.SendR3ApprovalEmail(title, comment, filePath, "", from, to, GlobalService.User);
             }

@@ -36,14 +36,14 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnComplete = new System.Windows.Forms.Button();
             this.txtTitle = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.cbAssign = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtQuestion = new System.Windows.Forms.TextBox();
             this.txtSolution = new System.Windows.Forms.RichTextBox();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnComplete = new System.Windows.Forms.Button();
+            this.txtAssignTo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtEnd
@@ -129,46 +129,6 @@
             this.label5.TabIndex = 150;
             this.label5.Text = "Solution";
             // 
-            // btnSave
-            // 
-            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.BackColor = System.Drawing.Color.White;
-            this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(77)))), ((int)(((byte)(154)))));
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
-            this.btnSave.Location = new System.Drawing.Point(530, 596);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(90, 25);
-            this.btnSave.TabIndex = 154;
-            this.btnSave.Tag = "";
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            this.btnSave.MouseEnter += new System.EventHandler(this.btnSave_MouseEnter);
-            this.btnSave.MouseLeave += new System.EventHandler(this.btnSave_MouseLeave);
-            // 
-            // btnComplete
-            // 
-            this.btnComplete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnComplete.BackColor = System.Drawing.Color.White;
-            this.btnComplete.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnComplete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(77)))), ((int)(((byte)(154)))));
-            this.btnComplete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnComplete.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComplete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
-            this.btnComplete.Location = new System.Drawing.Point(626, 596);
-            this.btnComplete.Name = "btnComplete";
-            this.btnComplete.Size = new System.Drawing.Size(90, 25);
-            this.btnComplete.TabIndex = 153;
-            this.btnComplete.Tag = "";
-            this.btnComplete.Text = "Completed";
-            this.btnComplete.UseVisualStyleBackColor = false;
-            this.btnComplete.Click += new System.EventHandler(this.btnComplete_Click);
-            this.btnComplete.MouseEnter += new System.EventHandler(this.btnSave_MouseEnter);
-            this.btnComplete.MouseLeave += new System.EventHandler(this.btnSave_MouseLeave);
-            // 
             // txtTitle
             // 
             this.txtTitle.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -187,15 +147,6 @@
             this.label6.Size = new System.Drawing.Size(36, 18);
             this.label6.TabIndex = 155;
             this.label6.Text = "Title";
-            // 
-            // cbAssign
-            // 
-            this.cbAssign.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbAssign.FormattingEnabled = true;
-            this.cbAssign.Location = new System.Drawing.Point(103, 317);
-            this.cbAssign.Name = "cbAssign";
-            this.cbAssign.Size = new System.Drawing.Size(238, 27);
-            this.cbAssign.TabIndex = 174;
             // 
             // label9
             // 
@@ -222,20 +173,48 @@
             this.txtSolution.TabIndex = 176;
             this.txtSolution.Text = "";
             // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(527, 587);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(93, 34);
+            this.btnSave.TabIndex = 177;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnComplete
+            // 
+            this.btnComplete.Location = new System.Drawing.Point(623, 587);
+            this.btnComplete.Name = "btnComplete";
+            this.btnComplete.Size = new System.Drawing.Size(93, 34);
+            this.btnComplete.TabIndex = 178;
+            this.btnComplete.Text = "Complete";
+            this.btnComplete.UseVisualStyleBackColor = true;
+            this.btnComplete.Click += new System.EventHandler(this.btnComplete_Click);
+            // 
+            // txtAssignTo
+            // 
+            this.txtAssignTo.Location = new System.Drawing.Point(103, 321);
+            this.txtAssignTo.Name = "txtAssignTo";
+            this.txtAssignTo.ReadOnly = true;
+            this.txtAssignTo.Size = new System.Drawing.Size(197, 23);
+            this.txtAssignTo.TabIndex = 179;
+            // 
             // PFormComment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(728, 633);
+            this.Controls.Add(this.txtAssignTo);
+            this.Controls.Add(this.btnComplete);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtSolution);
             this.Controls.Add(this.txtQuestion);
-            this.Controls.Add(this.cbAssign);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtTitle);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.btnComplete);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtEnd);
             this.Controls.Add(this.label4);
@@ -266,13 +245,13 @@
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnComplete;
         private System.Windows.Forms.TextBox txtTitle;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cbAssign;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtQuestion;
         private System.Windows.Forms.RichTextBox txtSolution;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnComplete;
+        private System.Windows.Forms.TextBox txtAssignTo;
     }
 }

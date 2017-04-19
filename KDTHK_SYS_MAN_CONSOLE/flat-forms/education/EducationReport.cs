@@ -30,13 +30,13 @@ namespace KDTHK_SYS_MAN_CONSOLE.flat_forms.education
             GetKdasSubmitted();
             GetKdhkSubmitted();
 
-            decimal kdthkAvg = Math.Round(Convert.ToDecimal(_kdthkSum) / Convert.ToDecimal(_kdthk), 2);
-            decimal kdasAvg = Math.Round(Convert.ToDecimal(_kdasSum) / Convert.ToDecimal(_kdas), 2);
-            decimal kdhkAvg = Math.Round(Convert.ToDecimal(_kdhkSum) / Convert.ToDecimal(_kdhk), 2);
+            decimal kdthkAvg = _kdthk == 0 ? Math.Round(Convert.ToDecimal(_kdthkSum) / Convert.ToDecimal(_kdthk), 2) : 0;
+            decimal kdasAvg = _kdas == 0 ? Math.Round(Convert.ToDecimal(_kdasSum) / Convert.ToDecimal(_kdas), 2) : 0;
+            decimal kdhkAvg = _kdhk == 0 ? Math.Round(Convert.ToDecimal(_kdhkSum) / Convert.ToDecimal(_kdhk), 2) : 0;
 
-            decimal kdthkAvgS = Math.Round(Convert.ToDecimal(_kdthkSum) / Convert.ToDecimal(_kdthkS), 2);
-            decimal kdasAvgS = Math.Round(Convert.ToDecimal(_kdasSum) / Convert.ToDecimal(_kdasS), 2);
-            decimal kdhkAvgS = Math.Round(Convert.ToDecimal(_kdhkSum) / Convert.ToDecimal(_kdhkS), 2);
+            decimal kdthkAvgS = _kdthk == 0 ? Math.Round(Convert.ToDecimal(_kdthkSum) / Convert.ToDecimal(_kdthkS), 2) : 0;
+            decimal kdasAvgS = _kdas == 0 ? Math.Round(Convert.ToDecimal(_kdasSum) / Convert.ToDecimal(_kdasS), 2) : 0;
+            decimal kdhkAvgS = _kdhk == 0 ? Math.Round(Convert.ToDecimal(_kdhkSum) / Convert.ToDecimal(_kdhkS), 2) : 0;
 
             Debug.WriteLine("KDTHK - Total: " + _kdthk + " Avg: " + kdthkAvg + " Submitted: " + _kdthkS + " Avg: " + kdthkAvgS);
             Debug.WriteLine("KDAS - Total: " + _kdas + " Avg: " + kdasAvg + " Submitted: " + _kdasS + " Avg: " + kdasAvgS);
@@ -67,7 +67,7 @@ namespace KDTHK_SYS_MAN_CONSOLE.flat_forms.education
 
         private void GetKdthkSubmitted()
         {
-            string query = "select count(*), sum(cast(r_score as int)) from TB_IT_EDU_RECORD where r_company = 'KDTHK'";
+            string query = "select count(*), sum(cast(r_score as int)) from TB_IT_EDU_RECORD where r_company = 'KDTHK' group by r_company";
             using (IDataReader reader = DataServiceEdu.GetInstance().ExecuteReader(query))
             {
                 while (reader.Read())
@@ -80,7 +80,7 @@ namespace KDTHK_SYS_MAN_CONSOLE.flat_forms.education
 
         private void GetKdasSubmitted()
         {
-            string query = "select count(*), sum(cast(r_score as int)) from TB_IT_EDU_RECORD where r_company = 'KDAS'";
+            string query = "select count(*), sum(cast(r_score as int)) from TB_IT_EDU_RECORD where r_company = 'KDAS' group by r_company";
             using (IDataReader reader = DataServiceEdu.GetInstance().ExecuteReader(query))
             {
                 while (reader.Read())
@@ -93,7 +93,7 @@ namespace KDTHK_SYS_MAN_CONSOLE.flat_forms.education
 
         private void GetKdhkSubmitted()
         {
-            string query = "select count(*), sum(cast(r_score as int)) from TB_IT_EDU_RECORD where r_company = 'KDHK'";
+            string query = "select count(*), sum(cast(r_score as int)) from TB_IT_EDU_RECORD where r_company = 'KDHK' group by r_company";
             using (IDataReader reader = DataServiceEdu.GetInstance().ExecuteReader(query))
             {
                 while (reader.Read())
